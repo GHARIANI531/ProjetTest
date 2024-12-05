@@ -1,0 +1,106 @@
+<div class="criteria-form">
+  <form [formGroup]="criteriaForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <!-- Colonne Age -->
+      <div class="column">
+        <h3>Age</h3>
+        <div>
+          <label>
+            <input type="radio" formControlName="age" value="<50" /> Age < 50
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" formControlName="age" value=">50" /> Age > 50
+          </label>
+        </div>
+      </div>
+
+      <!-- Colonne Contexte/Comorbidité -->
+      <div class="column">
+        <h3>Contexte/Comorbidité</h3>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="signeClinique" /> Signe clinique
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="fdrC" /> FDRC
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="migraine" /> Migraine
+          </label>
+        </div>
+      </div>
+
+      <!-- Colonne Topographie -->
+      <div class="column">
+        <h3>Topographie</h3>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="nerfOptique" /> Nerf optique
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="medullaire" /> Médullaire
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="cortical" /> Cortical
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="sousCortical" /> Sous-cortical
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="periventiculaire" /> Periventiculaire
+          </label>
+        </div>
+      </div>
+
+      <!-- Colonne Critères Additionnels -->
+      <div class="column">
+        <h3>Critères Additionnels</h3>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="signeVeineCentrale" /> Signe de la veine centrale >6
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="boc" /> Présence de BOC
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="indexKappa" /> Index Kappa
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="disseminationTemporelle" /> Dissemination temporelle
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" formControlName="prl" /> PRL
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit">Soumettre</button>
+  </form>
+
+  <div *ngIf="message" class="message">
+    <p>{{ message }}</p>
+  </div>
+</div>
